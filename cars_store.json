@@ -1,0 +1,69 @@
+{
+  "cars": [
+    {
+      "model": "KIA",
+      "price": 210000,
+      "carColour": "RED",
+      "milage": 41000,
+      "components": [
+        "FA",
+        "FB",
+        "FC"
+      ]
+    },
+    {
+      "model": "AUDI",
+      "price": 200000,
+      "carColour": "WHITE",
+      "milage": 4000,
+      "components": [
+        "EA",
+        "EB",
+        "EC"
+      ]
+    },
+    {
+      "model": "AUDI",
+      "price": 300000,
+      "carColour": "BLACK",
+      "milage": 30000,
+      "components": [
+        "AA",
+        "AB",
+        "AC"
+      ]
+    },
+    {
+      "model": "BMW",
+      "price": 200000,
+      "carColour": "GREEN",
+      "milage": 20000,
+      "components": [
+        "BB",
+        "BC",
+        "BA"
+      ]
+    },
+    {
+      "model": "TOYOTA",
+      "price": 130000,
+      "carColour": "BLACK",
+      "milage": 10000,
+      "components": [
+        "DA",
+        "DB",
+        "DC"
+      ]
+    },
+    {
+      "model": "MAZDA",
+      "price": 180000,
+      "carColour": "RED",
+      "milage": 35000,
+      "components": [
+        "CC",
+        "CB"
+      ]
+    }
+  ]
+}

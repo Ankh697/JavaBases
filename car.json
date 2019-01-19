@@ -1,0 +1,12 @@
+{
+  "model": "AUDI",
+  "price": 150000,
+  "carColour": "RED",
+  "milage": 20000,
+  "components": [
+    "CC",
+    "CD",
+    "CA",
+    "CB"
+  ]
+}
