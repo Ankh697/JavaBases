@@ -12,6 +12,38 @@
       ]
     },
     {
+      "model": "TOYOTA",
+      "price": 130000,
+      "carColour": "BLACK",
+      "milage": 10000,
+      "components": [
+        "DA",
+        "DB",
+        "DC"
+      ]
+    },
+    {
+      "model": "BMW",
+      "price": 200000,
+      "carColour": "GREEN",
+      "milage": 20000,
+      "components": [
+        "BB",
+        "BC",
+        "BA"
+      ]
+    },
+    {
+      "model": "MAZDA",
+      "price": 180000,
+      "carColour": "RED",
+      "milage": 35000,
+      "components": [
+        "CC",
+        "CB"
+      ]
+    },
+    {
       "model": "AUDI",
       "price": 200000,
       "carColour": "WHITE",
@@ -31,38 +63,6 @@
         "AA",
         "AB",
         "AC"
-      ]
-    },
-    {
-      "model": "BMW",
-      "price": 200000,
-      "carColour": "GREEN",
-      "milage": 20000,
-      "components": [
-        "BB",
-        "BC",
-        "BA"
-      ]
-    },
-    {
-      "model": "TOYOTA",
-      "price": 130000,
-      "carColour": "BLACK",
-      "milage": 10000,
-      "components": [
-        "DA",
-        "DB",
-        "DC"
-      ]
-    },
-    {
-      "model": "MAZDA",
-      "price": 180000,
-      "carColour": "RED",
-      "milage": 35000,
-      "components": [
-        "CC",
-        "CB"
       ]
     }
   ]

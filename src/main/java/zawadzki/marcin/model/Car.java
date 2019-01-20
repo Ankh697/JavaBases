@@ -9,7 +9,7 @@ import java.util.Set;
 @RequiredArgsConstructor
 @EqualsAndHashCode
 @Builder
-public class Car {
+public class Car implements Comparable {
     private String model;
 
     private BigDecimal price;
@@ -101,5 +101,10 @@ public class Car {
                 "milage=" + milage + "\n" +
                 "components=" + components + "\n" +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

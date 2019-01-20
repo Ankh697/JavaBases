@@ -83,5 +83,23 @@ public class App {
         CarsJsonConverter carsJsonConverter = new CarsJsonConverter(carsStoreJsonFilename);
         carsJsonConverter.toJson(carsStore);
         carsJsonConverter.fromJson().ifPresent(System.out::println);
+
+        System.out.println(carsStore.findCarsWithMilageGreaterThan(10000L));
+        System.out.println("============COLOUR===============");
+        System.out.println("\n");
+        carsStore.calculateNumberOfCarsForSpecifiedColor();
+        System.out.println("================================");
+        System.out.println("\n");
+        carsStore.statisticsForCars();
+        System.out.println(carsStore.carWithTheHighestPrice());
+        System.out.println("=================================");
+        System.out.println("\n");
+        System.out.println(carsStore.theMostExpensiveCarForTheSameModel());
+        System.out.println("=================================");
+        System.out.println("\n");
+        System.out.println(carsStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
+        System.out.println("=================================");
+        System.out.println("\n");
+        carsStore.carsWithSortedEquipment();
     }
 }
