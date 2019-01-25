@@ -1,17 +1,15 @@
 package zawadzki.marcin;
 
-import javafx.scene.paint.Color;
 import zawadzki.marcin.converters.CarJsonConverter;
 import zawadzki.marcin.converters.CarsJsonConverter;
 import zawadzki.marcin.model.Car;
 import zawadzki.marcin.model.CarColour;
-import zawadzki.marcin.model.Cars;
+import zawadzki.marcin.service.Cars;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.HashSet;
 
 import static com.google.common.collect.Sets.newHashSet;
+import static java.util.Arrays.*;
 
 /**
  * Hello world!
@@ -21,7 +19,7 @@ public class App {
         Car car = Car.builder()
                 .model("AUDI")
                 .price(BigDecimal.valueOf(150000))
-                .carColour(CarColour.RED)
+                .colour(CarColour.RED)
                 .components(newHashSet("CA", "CB", "CC", "CD"))
                 .milage(20000L)
                 .build();
@@ -39,44 +37,44 @@ public class App {
                 Car.builder()
                         .model("AUDI")
                         .price(BigDecimal.valueOf(300000))
-                        .carColour(CarColour.BLACK)
+                        .colour(CarColour.BLACK)
                         .milage(30000L)
-                        .components(newHashSet(Arrays.asList("AA", "AB", "AC")))
+                        .components(newHashSet(asList("AA", "AB", "AC")))
                         .build(),
                 Car.builder()
                         .model("BMW")
                         .price(BigDecimal.valueOf(200000))
-                        .carColour(CarColour.GREEN)
+                        .colour(CarColour.GREEN)
                         .milage(20000L)
-                        .components(new HashSet<>(Arrays.asList("BA", "BB", "BC")))
+                        .components(newHashSet(asList("BA", "BB", "BC")))
                         .build(),
                 Car.builder()
                         .model("MAZDA")
                         .price(BigDecimal.valueOf(180000))
-                        .carColour(CarColour.RED)
+                        .colour(CarColour.RED)
                         .milage(35000L)
-                        .components(new HashSet<>(Arrays.asList("CC", "CB", "CC")))
+                        .components(newHashSet(asList("CC", "CB", "CC")))
                         .build(),
                 Car.builder()
                         .model("TOYOTA")
                         .price(BigDecimal.valueOf(130000))
-                        .carColour(CarColour.BLACK)
+                        .colour(CarColour.BLACK)
                         .milage(10000L)
-                        .components(new HashSet<>(Arrays.asList("DA", "DB", "DC")))
+                        .components(newHashSet(asList("DA", "DB", "DC")))
                         .build(),
                 Car.builder()
                         .model("AUDI")
                         .price(BigDecimal.valueOf(200000))
-                        .carColour(CarColour.WHITE)
+                        .colour(CarColour.WHITE)
                         .milage(4000L)
-                        .components(new HashSet<>(Arrays.asList("EA", "EB", "EC")))
+                        .components(newHashSet(asList("EA", "EB", "EC")))
                         .build(),
                 Car.builder()
                         .model("KIA")
                         .price(BigDecimal.valueOf(210000))
-                        .carColour(CarColour.RED)
+                        .colour(CarColour.RED)
                         .milage(41000L)
-                        .components(new HashSet<>(Arrays.asList("FA", "FB", "FC")))
+                        .components(newHashSet(asList("FA", "FB", "FC")))
                         .build()));
 
         final String carsStoreJsonFilename = "cars_store.json";
@@ -98,8 +96,8 @@ public class App {
         System.out.println("=================================");
         System.out.println("\n");
         System.out.println(carsStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
-        System.out.println("=================================");
+        System.out.println("===========SORTED===========");
         System.out.println("\n");
-        carsStore.carsWithSortedEquipment();
+        System.out.println(carsStore.carsWithSortedEquipment());
     }
 }

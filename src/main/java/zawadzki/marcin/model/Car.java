@@ -1,9 +1,11 @@
 package zawadzki.marcin.model;
 
 import lombok.*;
+import zawadzki.marcin.exception.CarValueException;
 
 import java.math.BigDecimal;
 import java.util.Set;
+
 
 @Getter
 @RequiredArgsConstructor
@@ -13,50 +15,23 @@ public class Car implements Comparable {
     private String model;
 
     private BigDecimal price;
-    private CarColour carColour;
+    private CarColour colour;
     private Long milage;
     private Set<String> components;
 
-    public Car(String model, BigDecimal price, CarColour carColour, Long milage, Set<String> components) {
+    public Car(String model, BigDecimal price, CarColour colour, Long milage, Set<String> components) {
         this.model = model;
         this.price = price;
-        this.carColour = carColour;
+        this.colour = colour;
         this.milage = milage;
         this.components = components;
     }
 
-/*    public Car(String model, BigDecimal price, CarColour carColour, Long milage, Set<String> components) {
-        if (model.matches("^[A-Z\\s]+$")) {
-            this.model = model;
-        } else {
-            System.out.println("Model accept only capital letter and white spaces");
-        }
-        if (price.compareTo(BigDecimal.ZERO) > 0) {
-            this.price = price;
-        } else {
-            System.out.println("Price has to be greater than 0");
-        }
-        if (carColour.equals(carColour)) {
-            this.carColour = carColour;
-        } else {
-            System.out.println("Use colour value from enum");
-        }
-        if (milage > 0) {
-            this.milage = milage;
-        } else {
-            System.out.println("Milage should be greater than 0");
-        }
-        if (components.stream().allMatch(f -> f.matches("^[A-Z\\s]+$"))) {
-            this.components = components;
-        } else {
-            System.out.println("Equipment should has only capital letters and white spaces");
-        }
-    }*/
     public void setModel(String model) {
         if (model.matches("^[A-Z\\s]+$")) {
             this.model = model;
         } else {
-            System.out.println("Model accept only capital letter and white spaces");
+            throw new CarValueException("Model accept only capital letter and white spaces");
         }
     }
 
@@ -64,15 +39,15 @@ public class Car implements Comparable {
         if (price.compareTo(BigDecimal.ZERO) > 0) {
             this.price = price;
         } else {
-            System.out.println("Price has to be greater than 0");
+            throw new CarValueException("Price has to be greater than 0");
         }
     }
 
-    public void setCarColour(CarColour carColour) {
-        if (carColour.equals(carColour)) {
-            this.carColour = carColour;
+    public void setColour(CarColour colour) {
+        if (colour.equals(colour)) {
+            this.colour = colour;
         } else {
-            System.out.println("Use colour value from enum");
+            throw new CarValueException("Use colour value from enum");
         }
     }
 
@@ -80,7 +55,7 @@ public class Car implements Comparable {
         if (milage > 0) {
             this.milage = milage;
         } else {
-            System.out.println("Milage should be greater than 0");
+            throw new CarValueException("Mileage should be greater than 0");
         }
     }
 
@@ -97,7 +72,7 @@ public class Car implements Comparable {
         return "\n" + "Car{" + "\n" +
                 "model='" + model + '\'' + "\n" +
                 "price=" + price + "\n" +
-                "carColour=" + carColour + "\n" +
+                "colour=" + colour + "\n" +
                 "milage=" + milage + "\n" +
                 "components=" + components + "\n" +
                 '}';

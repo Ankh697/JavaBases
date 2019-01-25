@@ -1,7 +1,7 @@
 {
   "model": "AUDI",
   "price": 150000,
-  "carColour": "RED",
+  "colour": "RED",
   "milage": 20000,
   "components": [
     "CC",

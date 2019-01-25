@@ -2,17 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="071174f1-63f8-42c2-85fa-dca9dcf15026" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/enums/SortType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/exception/CarValueException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/service/Cars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CarManagemetSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CarManagemetSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car.json" beforeDir="false" afterPath="$PROJECT_DIR$/car.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cars_store.json" beforeDir="false" afterPath="$PROJECT_DIR$/cars_store.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/CarsJsonConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/CarsJsonConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/converters/CarsJsonConverter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/converters/CarsJsonConverter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Car$CarBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Car$CarBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars$CarsBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars$CarsBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars$CarsBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/zawadzki/marcin/model/Cars.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,35 +28,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/JsonConverter.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="192">
-                    <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-                    <folding>
-                      <element signature="imports" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
+            <state relative-caret-position="496">
+              <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,10 +47,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="80">
               <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-              <folding>
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#215#216#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,31 +67,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+            <state relative-caret-position="208">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3273#3274#0" expanded="true" />
-                <element signature="e#3297#3298#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/math/BigDecimal.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/JsonConverter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="837" column="51" selection-start-line="837" selection-start-column="51" selection-end-line="837" selection-end-column="51" />
+            <state relative-caret-position="71">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/exception/CarValueException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+              <folding>
+                <element signature="e#139#140#0" expanded="true" />
+                <element signature="e#169#170#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/service/Cars.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="544">
+              <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,15 +114,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cars_store.json">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Collectors.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/enums/SortType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="850" column="31" selection-start-line="850" selection-start-column="31" selection-end-line="850" selection-end-column="31" />
+            <state relative-caret-position="48">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -167,12 +166,15 @@
         <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/CarJsonConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/JsonConverter.java" />
         <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarColour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/CarsJsonConverter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/enums/SortType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/exception/CarValueException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/CarsJsonConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarComparator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zawadzki/marcin/service/Cars.java" />
       </list>
     </option>
   </component>
@@ -184,7 +186,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -195,6 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,19 +259,49 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="zawadzki" type="462c0819:PsiDirectoryNode" />
               <item name="marcin" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarManagemetSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarManagemetSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zawadzki" type="462c0819:PsiDirectoryNode" />
+              <item name="marcin" type="462c0819:PsiDirectoryNode" />
+              <item name="exception" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarManagemetSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarManagemetSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zawadzki" type="462c0819:PsiDirectoryNode" />
+              <item name="marcin" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CarManagemetSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CarManagemetSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zawadzki" type="462c0819:PsiDirectoryNode" />
+              <item name="marcin" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547943559371" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548449692238" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -277,6 +310,11 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="zawadzki.marcin" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -320,46 +358,48 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547886914038</updated>
-      <workItem from="1547886916607" duration="37824000" />
+      <workItem from="1547886916607" duration="38407000" />
+      <workItem from="1547970023128" duration="3483000" />
+      <workItem from="1548442642285" duration="6954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37824000" />
+    <option name="totallyTimeSpent" value="48844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16151386" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" weight="0.32936078" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.25460455" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Optional.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -398,50 +431,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/car.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarComparator.java" />
+    <entry file="file://$PROJECT_DIR$/cars_store.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/stream/Collectors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
+        <state relative-caret-position="12384">
           <caret line="850" column="31" selection-start-line="850" selection-start-column="31" selection-end-line="850" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/math/BigDecimal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
+        <state relative-caret-position="12752">
           <caret line="837" column="51" selection-start-line="837" selection-start-column="51" selection-end-line="837" selection-end-column="51" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/collections/eclipse-collections/9.2.0/eclipse-collections-9.2.0.jar!/org/eclipse/collections/impl/collector/Collectors2.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="89" column="58" selection-start-line="89" selection-start-column="58" selection-end-line="89" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="96">
+          <caret line="105" column="32" selection-start-line="105" selection-start-column="32" selection-end-line="105" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarColour.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/service.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/car.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars_store.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/JsonConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -449,10 +474,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -467,33 +488,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/converters/JsonConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        <state relative-caret-position="71">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3273#3274#0" expanded="true" />
-            <element signature="e#3297#3298#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarComparator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/enums/SortType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="48">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/exception/CarValueException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
           <folding>
-            <element signature="e#171#172#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#139#140#0" expanded="true" />
+            <element signature="e#169#170#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Cars.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/CarColour.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="32">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/model/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="464" column="57" selection-start-line="464" selection-start-column="12" selection-end-line="464" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zawadzki/marcin/service/Cars.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
