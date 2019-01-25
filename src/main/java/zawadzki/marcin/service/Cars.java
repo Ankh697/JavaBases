@@ -4,7 +4,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
-import org.apache.commons.beanutils.BeanComparator;
 import org.eclipse.collections.impl.collector.Collectors2;
 import zawadzki.marcin.converters.CarsJsonConverter;
 import zawadzki.marcin.enums.SortType;
