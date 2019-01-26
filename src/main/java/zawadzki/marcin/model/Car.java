@@ -47,7 +47,7 @@ public class Car implements Comparable {
     }
 
     public void setColour(CarColour colour) {
-        if (colour.equals(colour)) {
+        if (colour.equals(CarColour.values())) {
             this.colour = colour;
         } else {
             throw new CarValueException("Use colour value from enum");

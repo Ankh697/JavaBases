@@ -131,10 +131,22 @@ public class App {
                     System.out.println("\n");
                     System.out.println("Type model param (only great letters and white spaces)");
                     String model = sc.next();
+                    while(!model.matches("^[A-Z\\s]+$")) {
+                        System.out.println("Type model in good pattern");
+                        model = sc.next();
+                    }
                     System.out.println("Type price param (price greater than 0)");
                     BigDecimal price = sc.nextBigDecimal();
+                    while(price.compareTo(BigDecimal.ZERO) < 0) {
+                        System.out.println("Price should be greater than 0");
+                        price = sc.nextBigDecimal();
+                    }
                     System.out.println("Type colour param (Accepted colours from enum(BLACK, RED, GREEN, WHITE)");
                     CarColour colour = CarColour.valueOf(sc.next());
+                    while(!colour.equals(colour)) {
+                        System.out.println("Choose colour: WHITE, GREEN, BLACK, RED");
+                        colour = CarColour.valueOf(sc.next());
+                    }
                     System.out.println("Type mileage param (Accepted greater than 0");
                     Long mileage = sc.nextLong();
                     System.out.println("Type components params (only great letters and white spaces)");
