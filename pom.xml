@@ -6,7 +6,12 @@
 
   <groupId>zawadzki.marcin</groupId>
   <artifactId>CarManagemetSystem</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>02_CarManagment</module>
+    <!--<module>02_CarManagment</module>-->
+  </modules>
 
   <name>CarManagemetSystem</name>
   <!-- FIXME change it to the project's website -->
