@@ -1,6 +1,9 @@
 package zawadzki.marcin.model;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import zawadzki.marcin.exception.CarValueException;
 
 import java.math.BigDecimal;

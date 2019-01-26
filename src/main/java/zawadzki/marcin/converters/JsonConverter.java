@@ -13,7 +13,7 @@ import java.util.Optional;
 public abstract class JsonConverter<T> {
     private final String jsonFilename;
     private final Gson gson = new GsonBuilder().setPrettyPrinting().create();
-    private final Type type = ((ParameterizedType)getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+    private final Type type = ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 
     public JsonConverter(String jsonFilename) {
         this.jsonFilename = jsonFilename;
