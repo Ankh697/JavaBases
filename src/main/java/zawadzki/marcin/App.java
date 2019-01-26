@@ -82,21 +82,29 @@ public class App {
         carsJsonConverter.toJson(carsStore);
         carsJsonConverter.fromJson().ifPresent(System.out::println);
 
+        System.out.println("Cars with milage greater than 10000 km");
         System.out.println(carsStore.findCarsWithMilageGreaterThan(10000L));
-        System.out.println("============COLOUR===============");
+
+        System.out.println("Number of cars for specified color");
         System.out.println("\n");
         carsStore.calculateNumberOfCarsForSpecifiedColor();
-        System.out.println("================================");
+
+        System.out.println("Car statistics");
         System.out.println("\n");
         carsStore.statisticsForCars();
+
+        System.out.println("Car with the highest price");
         System.out.println(carsStore.carWithTheHighestPrice());
-        System.out.println("=================================");
+
+        System.out.println("Find the most expensive car for the same model");
         System.out.println("\n");
         System.out.println(carsStore.theMostExpensiveCarForTheSameModel());
-        System.out.println("=================================");
+
+        System.out.println("Find cars between prices");
         System.out.println("\n");
         System.out.println(carsStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
-        System.out.println("===========SORTED===========");
+
+        System.out.println("===========Cars sorted by equipment===========");
         System.out.println("\n");
         System.out.println(carsStore.carsWithSortedEquipment());
     }
