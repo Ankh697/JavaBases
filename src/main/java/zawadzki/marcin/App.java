@@ -4,7 +4,8 @@ import zawadzki.marcin.converters.CarJsonConverter;
 import zawadzki.marcin.converters.CarsJsonConverter;
 import zawadzki.marcin.model.Car;
 import zawadzki.marcin.model.CarColour;
-import zawadzki.marcin.service.Cars;
+import zawadzki.marcin.service.CarsService;
+import zawadzki.marcin.service.MenuService;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -19,6 +20,13 @@ import static java.util.Arrays.asList;
  */
 public class App {
     public static void main(String[] args) {
+
+        // new MenuService().mainMenu();
+
+
+
+
+
         Car car = Car.builder()
                 .model("AUDI")
                 .price(BigDecimal.valueOf(150000))
@@ -34,7 +42,7 @@ public class App {
         carJsonConverter.fromJson().ifPresent(System.out::println);
 
 
-        Cars carsStore = new Cars(newHashSet(
+        CarsService carsServiceStore = new CarsService(newHashSet(
                 Car.builder()
                         .model("AUDI")
                         .price(BigDecimal.valueOf(300000))
@@ -80,34 +88,34 @@ public class App {
 
         final String carsStoreJsonFilename = "cars_store.json";
         CarsJsonConverter carsJsonConverter = new CarsJsonConverter(carsStoreJsonFilename);
-        carsJsonConverter.toJson(carsStore);
+        carsJsonConverter.toJson(carsServiceStore);
         carsJsonConverter.fromJson().ifPresent(System.out::println);
 
-        System.out.println("Cars with milage greater than 10000 km");
-        System.out.println(carsStore.findCarsWithMilageGreaterThan(10000L));
+        System.out.println("CarsService with milage greater than 10000 km");
+        System.out.println(carsServiceStore.findCarsWithMilageGreaterThan(10000L));
 
         System.out.println("Number of cars for specified color");
         System.out.println("\n");
-        carsStore.calculateNumberOfCarsForSpecifiedColor();
+        carsServiceStore.calculateNumberOfCarsForSpecifiedColor();
 
         System.out.println("Car statistics");
         System.out.println("\n");
-        carsStore.statisticsForCars();
+        carsServiceStore.statisticsForCars();
 
         System.out.println("Car with the highest price");
-        System.out.println(carsStore.carWithTheHighestPrice());
+        System.out.println(carsServiceStore.carWithTheHighestPrice());
 
         System.out.println("Find the most expensive car for the same model");
         System.out.println("\n");
-        System.out.println(carsStore.theMostExpensiveCarForTheSameModel());
+        System.out.println(carsServiceStore.theMostExpensiveCarForTheSameModel());
 
         System.out.println("Find cars between prices");
         System.out.println("\n");
-        System.out.println(carsStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
+        System.out.println(carsServiceStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
 
-        System.out.println("===========Cars sorted by equipment===========");
+        System.out.println("===========CarsService sorted by equipment===========");
         System.out.println("\n");
-        System.out.println(carsStore.carsWithSortedEquipment());
+        System.out.println(carsServiceStore.carsWithSortedEquipment());
 
         Scanner sc = new Scanner(System.in);
         System.out.println("\n");
@@ -157,41 +165,41 @@ public class App {
                         componentsList.add(component);
                     }
                     Car carAdded = new Car(model, price, colour, mileage, componentsList);
-                    carsStore.getCars().add(carAdded);
+                    carsServiceStore.getCars().add(carAdded);
 
                     System.out.println("Below you can check parameters of your new brand car!");
                     System.out.println(carAdded);
                     System.out.println("Bellow you can check cars collection after car addition");
-                    System.out.println(carsStore);
+                    System.out.println(carsServiceStore);
                     break;
                 case 2:
                     System.out.println("Now you are printing stream operations for car collection");
 
-                    System.out.println("Cars with milage greater than 10000 km");
-                    System.out.println(carsStore.findCarsWithMilageGreaterThan(10000L));
+                    System.out.println("CarsService with milage greater than 10000 km");
+                    System.out.println(carsServiceStore.findCarsWithMilageGreaterThan(10000L));
 
                     System.out.println("Number of cars for specified color");
                     System.out.println("\n");
-                    carsStore.calculateNumberOfCarsForSpecifiedColor();
+                    carsServiceStore.calculateNumberOfCarsForSpecifiedColor();
 
                     System.out.println("Car statistics");
                     System.out.println("\n");
-                    carsStore.statisticsForCars();
+                    carsServiceStore.statisticsForCars();
 
                     System.out.println("Car with the highest price");
-                    System.out.println(carsStore.carWithTheHighestPrice());
+                    System.out.println(carsServiceStore.carWithTheHighestPrice());
 
                     System.out.println("Find the most expensive car for the same model");
                     System.out.println("\n");
-                    System.out.println(carsStore.theMostExpensiveCarForTheSameModel());
+                    System.out.println(carsServiceStore.theMostExpensiveCarForTheSameModel());
 
                     System.out.println("Find cars between prices");
                     System.out.println("\n");
-                    System.out.println(carsStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
+                    System.out.println(carsServiceStore.carsBetweenPrices(new BigDecimal(100000), new BigDecimal(300000)));
 
-                    System.out.println("===========Cars sorted by equipment===========");
+                    System.out.println("===========CarsService sorted by equipment===========");
                     System.out.println("\n");
-                    System.out.println(carsStore.carsWithSortedEquipment());
+                    System.out.println(carsServiceStore.carsWithSortedEquipment());
                     break;
                 case 3:
                     System.exit(0);

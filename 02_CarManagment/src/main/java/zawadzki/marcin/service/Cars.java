@@ -26,13 +26,14 @@ import static java.util.stream.Collectors.toList;
 public class Cars {
     private final Set<Car> cars;
 
+    // DOROBI KOLEJ
 
     public List<Car> sort(SortType sortType, boolean descending) {
         Stream<Car> carStream = null;
 
         switch (sortType) {
             case COMPONENT_LIST:
-                carStream = cars.stream().sorted(Comparator.comparing(c -> c.getCarBody().getComponents()));
+                carStream = cars.stream().sorted(Comparator.comparingInt(c -> c.getCarBody().getComponents().size()));
                 break;
             case ENGINE_POWER:
                 carStream = cars.stream().sorted(Comparator.comparing(c -> c.getEngine().getPower()));

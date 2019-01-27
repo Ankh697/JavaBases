@@ -1,8 +1,8 @@
 package zawadzki.marcin.converters;
 
-import zawadzki.marcin.service.Cars;
+import zawadzki.marcin.service.CarsService;
 
-public class CarsJsonConverter extends JsonConverter<Cars> {
+public class CarsJsonConverter extends JsonConverter<CarsService> {
     public CarsJsonConverter(String jsonFilename) {
         super(jsonFilename);
     }

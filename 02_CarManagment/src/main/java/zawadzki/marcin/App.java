@@ -85,6 +85,13 @@ public class App {
                         .wheel(new Wheel("Alloy", 22, WheelType.SUMMER))
                         .type(CarBodyType.SEDAN)
                         .build()
+
         ));
+
+        /*String s = "ala ma kota";
+
+        String[] arr = s.split(" ");
+        String[] arr2 = new String[]{s};
+        String[] arr3 = {s};*/
     }
 }

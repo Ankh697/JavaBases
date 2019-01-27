@@ -24,11 +24,11 @@ import static java.util.stream.Collectors.*;
 @Getter
 @Setter
 @RequiredArgsConstructor
-public class Cars {
+public class CarsService {
     private final Set<Car> cars;
 
 
-    public Cars(String jsonFilename) {
+    public CarsService(String jsonFilename) {
         jsonFilename = "D:\\ProgramowanieJava\\JavaBases\\CarManagemetSystem\\cars_store.json";
         this.cars = new CarsJsonConverter(jsonFilename).fromJson().get().getCars();
     }

@@ -4,7 +4,7 @@ import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import zawadzki.marcin.exception.CarValueException;
+import zawadzki.marcin.exception.CustomException;
 
 import java.math.BigDecimal;
 import java.util.Set;
@@ -34,7 +34,7 @@ public class Car implements Comparable {
         if (model.matches("^[A-Z\\s]+$")) {
             this.model = model;
         } else {
-            throw new CarValueException("Model accept only capital letter and white spaces");
+            throw new CustomException("Model accept only capital letter and white spaces");
         }
     }
 
@@ -42,7 +42,7 @@ public class Car implements Comparable {
         if (price.compareTo(BigDecimal.ZERO) > 0) {
             this.price = price;
         } else {
-            throw new CarValueException("Price has to be greater than 0");
+            throw new CustomException("Price has to be greater than 0");
         }
     }
 
@@ -50,7 +50,7 @@ public class Car implements Comparable {
         if (colour.equals(CarColour.values())) {
             this.colour = colour;
         } else {
-            throw new CarValueException("Use colour value from enum");
+            throw new CustomException("Use colour value from enum");
         }
     }
 
@@ -58,7 +58,7 @@ public class Car implements Comparable {
         if (milage > 0) {
             this.milage = milage;
         } else {
-            throw new CarValueException("Mileage should be greater than 0");
+            throw new CustomException("Mileage should be greater than 0");
         }
     }
 
