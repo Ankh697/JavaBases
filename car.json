@@ -2,7 +2,7 @@
   "model": "AUDI",
   "price": 150000,
   "colour": "RED",
-  "milage": 20000,
+  "mileage": 20000,
   "components": [
     "CC",
     "CD",

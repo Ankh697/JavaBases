@@ -1,0 +1,163 @@
+{
+  "cars": [
+    {
+      "model": "KIA",
+      "price": 310000,
+      "mileage": 200,
+      "engine": {
+        "engineType": "GASOLINE",
+        "power": 350.0
+      },
+      "carBody": {
+        "carBodyColour": "GREEN",
+        "components": [
+          "AC",
+          "AMBIENT LIGHT",
+          "SPORT EXHAUST"
+        ]
+      },
+      "type": "COMBI",
+      "wheel": {
+        "model": "Alloy",
+        "size": 22,
+        "wheelType": "SUMMER"
+      }
+    },
+    {
+      "model": "SEAT",
+      "price": 200000,
+      "mileage": 12000,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 310.0
+      },
+      "carBody": {
+        "carBodyColour": "BLACK",
+        "components": [
+          "AC",
+          "GLASS ROOF",
+          "CARBON HOOD"
+        ]
+      },
+      "type": "SEDAN",
+      "wheel": {
+        "model": "Alloy",
+        "size": 22,
+        "wheelType": "SUMMER"
+      }
+    },
+    {
+      "model": "MERCEDES",
+      "price": 250000,
+      "mileage": 200,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 300.0
+      },
+      "carBody": {
+        "carBodyColour": "RED",
+        "components": [
+          "AMBIENT LIGHT",
+          "LINE ASSIST",
+          "CARBON HOOD"
+        ]
+      },
+      "type": "HATCHBACK",
+      "wheel": {
+        "model": "Alloy",
+        "size": 20,
+        "wheelType": "SUMMER"
+      }
+    },
+    {
+      "model": "BMW",
+      "price": 300000,
+      "mileage": 200,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 300.0
+      },
+      "carBody": {
+        "carBodyColour": "BLACK",
+        "components": [
+          "AC, GLASS ROOF, CARBON HOOD"
+        ]
+      },
+      "type": "HATCHBACK",
+      "wheel": {
+        "model": "Steel",
+        "size": 20,
+        "wheelType": "WINTER"
+      }
+    },
+    {
+      "model": "VOLKSVAGEN",
+      "price": 300000,
+      "mileage": 120000,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 300.0
+      },
+      "carBody": {
+        "carBodyColour": "WHITE",
+        "components": [
+          "NITRO",
+          "DSG",
+          "BLUETOOTH"
+        ]
+      },
+      "type": "COMBI",
+      "wheel": {
+        "model": "Alloy",
+        "size": 20,
+        "wheelType": "SUMMER"
+      }
+    },
+    {
+      "model": "AUDI",
+      "price": 350000,
+      "mileage": 300,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 400.0
+      },
+      "carBody": {
+        "carBodyColour": "RED",
+        "components": [
+          "NITRO",
+          "DSG",
+          "SPORT SUSPENSION"
+        ]
+      },
+      "type": "SEDAN",
+      "wheel": {
+        "model": "Alloy",
+        "size": 21,
+        "wheelType": "SUMMER"
+      }
+    },
+    {
+      "model": "AUDI",
+      "price": 400000,
+      "mileage": 200,
+      "engine": {
+        "engineType": "DIESEL",
+        "power": 300.0
+      },
+      "carBody": {
+        "carBodyColour": "SILVER",
+        "components": [
+          "AMBIENT LIGHT",
+          "SPORT PACKAGE",
+          "SPORT EXHAUST"
+        ]
+      },
+      "type": "SEDAN",
+      "wheel": {
+        "model": "Alloy",
+        "size": 22,
+        "wheelType": "SUMMER"
+      }
+    }
+  ]
+}
