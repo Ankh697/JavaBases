@@ -1,21 +1,10 @@
 {
   "cars": [
     {
-      "model": "AUDI",
-      "price": 200000,
-      "colour": "WHITE",
-      "milage": 4000,
-      "components": [
-        "EA",
-        "EB",
-        "EC"
-      ]
-    },
-    {
       "model": "BMW",
       "price": 200000,
       "colour": "GREEN",
-      "milage": 20000,
+      "mileage": 20000,
       "components": [
         "BB",
         "BC",
@@ -23,31 +12,10 @@
       ]
     },
     {
-      "model": "TOYOTA",
-      "price": 130000,
-      "colour": "BLACK",
-      "milage": 10000,
-      "components": [
-        "DA",
-        "DB",
-        "DC"
-      ]
-    },
-    {
-      "model": "MAZDA",
-      "price": 180000,
-      "colour": "RED",
-      "milage": 35000,
-      "components": [
-        "CC",
-        "CB"
-      ]
-    },
-    {
       "model": "KIA",
       "price": 210000,
       "colour": "RED",
-      "milage": 41000,
+      "mileage": 41000,
       "components": [
         "FA",
         "FB",
@@ -55,10 +23,42 @@
       ]
     },
     {
+      "model": "MAZDA",
+      "price": 180000,
+      "colour": "RED",
+      "mileage": 35000,
+      "components": [
+        "CC",
+        "CB"
+      ]
+    },
+    {
+      "model": "TOYOTA",
+      "price": 130000,
+      "colour": "BLACK",
+      "mileage": 10000,
+      "components": [
+        "DA",
+        "DB",
+        "DC"
+      ]
+    },
+    {
+      "model": "AUDI",
+      "price": 200000,
+      "colour": "WHITE",
+      "mileage": 4000,
+      "components": [
+        "EA",
+        "EB",
+        "EC"
+      ]
+    },
+    {
       "model": "AUDI",
       "price": 300000,
       "colour": "BLACK",
-      "milage": 30000,
+      "mileage": 30000,
       "components": [
         "AA",
         "AB",

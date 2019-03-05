@@ -1,5 +1,6 @@
 package zawadzki.marcin;
 
+import zawadzki.marcin.converters.CarsJsonConverter;
 import zawadzki.marcin.enums.CarBodyColour;
 import zawadzki.marcin.enums.CarBodyType;
 import zawadzki.marcin.enums.EngineType;
@@ -11,15 +12,16 @@ import zawadzki.marcin.model.Wheel;
 import zawadzki.marcin.service.Cars;
 
 import java.math.BigDecimal;
+import zawadzki.marcin.service.MenuService;
 
 import static com.google.common.collect.Lists.newArrayList;
 import static com.google.common.collect.Sets.newHashSet;
 
-/**
- * Hello world!
- */
+
 public class App {
     public static void main(String[] args) {
+
+        new MenuService().mainMenu();
 
         Cars carsStore = new Cars(newHashSet(
                 Car.builder()
@@ -28,7 +30,7 @@ public class App {
                         .mileage(200L)
                         .carBody(new CarBody(CarBodyColour.BLACK, newArrayList("AC, GLASS ROOF, CARBON HOOD")))
                         .engine(new Engine(EngineType.DIESEL, 300))
-                        .wheel(new Wheel("Steel", 20, WheelType.SUMMER))
+                        .wheel(new Wheel("Steel", 20, WheelType.WINTER))
                         .type(CarBodyType.HATCHBACK)
                         .build(),
                 Car.builder()
@@ -88,10 +90,11 @@ public class App {
 
         ));
 
-        /*String s = "ala ma kota";
+        System.out.println(carsStore.wheelTypesForCarsCollection());
 
-        String[] arr = s.split(" ");
-        String[] arr2 = new String[]{s};
-        String[] arr3 = {s};*/
+        final String carsStoreJsonFilename = "cars_storage.json";
+        CarsJsonConverter carsJsonConverter = new CarsJsonConverter(carsStoreJsonFilename);
+        carsJsonConverter.toJson(carsStore);
+        carsJsonConverter.fromJson().ifPresent(System.out::println);
     }
 }
