@@ -55,7 +55,7 @@ public class CarsService {
 
   // KM
   List<Car> sort(SortType sortType, boolean descending) {
-    Stream<Car> carStream = null;
+    Stream<Car> carStream;
 
     switch (sortType) {
       case COLOR:
