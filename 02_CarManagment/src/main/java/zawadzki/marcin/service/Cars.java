@@ -34,7 +34,7 @@ public class Cars {
   private final Set<Car> cars;
 
   Cars(String jsonFilename) {
-    jsonFilename = "D:\\Programowanie\\JavaBasics\\JavaBases\\cars_storage.json";
+    jsonFilename = "D:\\Programowanie\\JavaBases\\cars_storage.json";
     this.cars = new CarsJsonConverter(jsonFilename).fromJson().get().getCars();
   }
 

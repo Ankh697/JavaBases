@@ -43,7 +43,7 @@ public class CarsService {
 
 
   CarsService(String jsonFilename) {
-    jsonFilename = "D:\\Programowanie\\JavaBasics\\JavaBases\\cars_store.json";
+    jsonFilename = "D:\\Programowanie\\JavaBases\\cars_store.json";
     this.cars = new CarsJsonConverter(jsonFilename).fromJson().get().getCars();
   }
 

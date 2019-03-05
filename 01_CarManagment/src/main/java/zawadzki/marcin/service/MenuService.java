@@ -120,7 +120,7 @@ public class MenuService {
             break;
 
           case 3:
-            String jsonFilename = "D:\\Programowanie\\JavaBasics\\JavaBases\\cars_store.json";
+            String jsonFilename = "D:\\Programowanie\\JavaBases\\cars_store.json";
             Set<Car> cars;
             cars = new CarsJsonConverter(jsonFilename).fromJson().get().getCars();
             System.out.println(cars);
