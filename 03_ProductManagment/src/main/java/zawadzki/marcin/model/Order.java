@@ -1,6 +1,5 @@
 package zawadzki.marcin.model;
 
-import com.google.common.primitives.UnsignedInteger;
 import lombok.*;
 import zawadzki.marcin.exception.CustomOrderException;
 
@@ -16,7 +15,7 @@ public class Order {
   private Customer customer;
   private Product product;
 
-  private UnsignedInteger quantity;
+  private Integer quantity;
   private LocalDate estimatedRealizationDate;
 
   public static OrderBuilder builder() {
@@ -34,15 +33,15 @@ public class Order {
 
     private Customer customer;
     private Product product;
-    private UnsignedInteger quantity;
+    private Integer quantity;
     private LocalDate estimatedRealizationDate;
 
-    public OrderBuilder quantity(UnsignedInteger quantity) {
+    public OrderBuilder quantity(Integer quantity) {
       try {
         if (Objects.isNull(quantity)) {
           throw new CustomOrderException("Quantity cannot be null");
         }
-        if (quantity.compareTo(UnsignedInteger.ZERO) < 0) {
+        if (quantity < 0) {
           throw new CustomOrderException("Quantity cannot be smaller than 18");
         }
         this.quantity = quantity;
