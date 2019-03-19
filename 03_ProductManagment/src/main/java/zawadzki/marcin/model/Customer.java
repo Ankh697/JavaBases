@@ -4,7 +4,10 @@ import lombok.*;
 import org.apache.commons.validator.routines.EmailValidator;
 import zawadzki.marcin.exception.CustomCustomerException;
 
+import java.time.LocalDate;
 import java.util.Objects;
+
+import static java.time.Period.between;
 
 @Getter
 @RequiredArgsConstructor
@@ -15,7 +18,7 @@ public class Customer {
 
   private String name;
   private String surname;
-  private Long age;
+  private LocalDate birthDate;
   private String email;
 
   public static CustomerBuilder builder() {
@@ -25,7 +28,7 @@ public class Customer {
   private Customer(CustomerBuilder customerBuilder) {
     this.name = customerBuilder.name;
     this.surname = customerBuilder.surname;
-    this.age = customerBuilder.age;
+    this.birthDate = customerBuilder.birthDate;
     this.email = customerBuilder.email;
   }
 
@@ -35,7 +38,7 @@ public class Customer {
 
     private String name;
     private String surname;
-    private Long age;
+    private LocalDate birthDate;
     private String email;
 
     public CustomerBuilder name(String name) {
@@ -64,15 +67,15 @@ public class Customer {
       }
     }
 
-    public CustomerBuilder age(Long age) {
+    public CustomerBuilder birthDate(LocalDate birthDate) {
       try {
-        if (Objects.isNull(age)) {
+        if (Objects.isNull(birthDate)) {
           throw new CustomCustomerException("Age cannot be null");
         }
-        if (age <= 18) {
+        if (between(birthDate, LocalDate.now()).getYears() < 18) {
           throw new CustomCustomerException("Age cannot be smaller than 18");
         }
-        this.age = age;
+        this.birthDate = birthDate;
         return this;
       } catch (Exception e) {
         throw new CustomCustomerException("Validation error for age");
