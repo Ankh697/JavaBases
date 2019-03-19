@@ -4,8 +4,8 @@ import zawadzki.marcin.converters.OrdersJsonConverter;
 import zawadzki.marcin.enums.Category;
 import zawadzki.marcin.model.Customer;
 import zawadzki.marcin.model.Order;
-import zawadzki.marcin.model.Orders;
 import zawadzki.marcin.model.Product;
+import zawadzki.marcin.service.Orders;
 
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -15,7 +15,6 @@ import static com.google.common.collect.Lists.newArrayList;
 
 public class App {
   public static void main(String[] args) throws IOException {
-    // new Product("LEVER", BigDecimal.valueOf(120), Category.C)
     Orders orderList =
         new Orders(
             newArrayList(
@@ -125,7 +124,8 @@ public class App {
     System.out.println("MAX PRICE");
     System.out.println(orderList.findCustomerWithTheHighestPriceForOrder());
 
-    System.out.println("You can find customer with product quantity greater than in CustomerWithOrderQuantityGreater.json file");
+    System.out.println(
+        "You can find customer with product quantity greater than in CustomerWithOrderQuantityGreater.json file");
     orderList.customersWhoOrderedAtLeastNumberOfProducts(19);
 
     System.out.println("Number of customer with orders number greater than: ");
