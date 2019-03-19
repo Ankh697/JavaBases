@@ -1,4 +1,4 @@
-package zawadzki.marcin.model;
+package zawadzki.marcin.service;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -9,6 +9,8 @@ import lombok.Setter;
 import zawadzki.marcin.converters.OrdersJsonConverter;
 import zawadzki.marcin.enums.Category;
 import zawadzki.marcin.exception.CustomOrderException;
+import zawadzki.marcin.model.Customer;
+import zawadzki.marcin.model.Order;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,14 +18,17 @@ import java.io.Writer;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.*;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ZERO;
 import static java.math.BigDecimal.valueOf;
 import static java.time.Period.between;
 import static java.util.Arrays.asList;
-import static java.util.Objects.*;
+import static java.util.Objects.requireNonNull;
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.groupingBy;
 
@@ -33,7 +38,7 @@ import static java.util.stream.Collectors.groupingBy;
 @RequiredArgsConstructor
 public class Orders {
 
-  private final List<Order> productList;
+  private final List<Order> products;
 
   private static final int MAXIMAL_AGE_WITH_DISCOUNT = 25;
   private static final BigDecimal DISCOUNT_RATIO_FOR_CUSTOMER_YOUNGER_THAN_25 = valueOf(0.97);
@@ -42,29 +47,30 @@ public class Orders {
 
   Orders() {
     String jsonFilename = "D:\\Programowanie\\JavaBases\\orders.json";
-    this.productList = requireNonNull(new OrdersJsonConverter(jsonFilename).fromJson().orElse(null)).getProductList();
+    this.products =
+        requireNonNull(new OrdersJsonConverter(jsonFilename).fromJson().orElse(null)).getProducts();
   }
 
   public BigDecimal averagePriceForAllOrdersBetweenTwoDates(LocalDate begin, LocalDate end) {
-    return productList.stream()
+    return products.stream()
         .filter(
             order ->
                 order.getEstimatedRealizationDate().compareTo(begin) > 0
                     && order.getEstimatedRealizationDate().compareTo(end) < 0)
         .map(order -> order.getProduct().getPrice())
         .reduce(ZERO, BigDecimal::add)
-        .divide(BigDecimal.valueOf(productList.size()), BigDecimal.ROUND_HALF_UP);
+        .divide(BigDecimal.valueOf(products.size()), BigDecimal.ROUND_HALF_UP);
   }
 
   public LocalDate findDateWithTheMostNumbersOfOrders() {
-    return productList.stream()
+    return products.stream()
         .max(Comparator.comparing(Order::getQuantity))
         .map(Order::getEstimatedRealizationDate)
         .orElse(LocalDate.of(1970, 1, 1));
   }
 
   public LocalDate findDateWithLeastNumbersOfOrders() {
-    return productList.stream()
+    return products.stream()
         .min(Comparator.comparing(Order::getQuantity))
         .map(Order::getEstimatedRealizationDate)
         .orElse(LocalDate.of(1970, 1, 1));
@@ -73,7 +79,7 @@ public class Orders {
   public Customer findCustomerWithTheHighestPriceForOrder() {
 
     return requireNonNull(
-            productList.stream()
+            products.stream()
                 .collect(
                     Collectors.toMap(
                         Order::getCustomer,
@@ -91,7 +97,7 @@ public class Orders {
 
   public void customersWhoOrderedAtLeastNumberOfProducts(int x) throws IOException {
     List<Customer> collection =
-        productList.stream()
+        products.stream()
             .filter(p -> p.getQuantity() > x)
             .map(Order::getCustomer)
             .collect(Collectors.toList());
@@ -103,11 +109,11 @@ public class Orders {
   }
 
   public long customerNumberWhoOrderedAtLeastNumberOfProducts(int x) {
-    return productList.stream().filter(p -> p.getQuantity() > x).map(Order::getCustomer).count();
+    return products.stream().filter(p -> p.getQuantity() > x).map(Order::getCustomer).count();
   }
 
   public Category theMostCommonProductCategory() {
-    return productList.stream()
+    return products.stream()
         .collect(groupingBy(order -> order.getProduct().getCategory(), counting()))
         .entrySet()
         .stream()
@@ -117,7 +123,7 @@ public class Orders {
   }
 
   public Map<Month, Integer> monthWithTheNumberOfOrderedProducts() {
-    return productList.stream()
+    return products.stream()
         .collect(
             groupingBy(
                 order -> order.getEstimatedRealizationDate().getMonth(),
@@ -126,7 +132,7 @@ public class Orders {
 
   public Map<Month, Category> method1() {
 
-    return productList.stream()
+    return products.stream()
         .collect(Collectors.groupingBy(o -> o.getEstimatedRealizationDate().getMonth()))
         .entrySet()
         .stream()
@@ -155,7 +161,7 @@ public class Orders {
   }
 
   public BigDecimal totalPriceOfAllOrdersAfterPriceReduction() {
-    return productList.stream()
+    return products.stream()
         .map(
             i -> {
               if (between(i.getCustomer().getBirthDate(), LocalDate.now()).getYears()

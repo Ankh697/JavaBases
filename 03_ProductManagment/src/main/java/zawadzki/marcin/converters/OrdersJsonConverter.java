@@ -1,7 +1,7 @@
 package zawadzki.marcin.converters;
 
 
-import zawadzki.marcin.model.Orders;
+import zawadzki.marcin.service.Orders;
 
 public class OrdersJsonConverter extends JsonConverter<Orders> {
 
